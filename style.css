@@ -11,3 +11,13 @@ body{
     display: flex;
     border-radius: 10px;
 }
+.img_cabe{
+    width: 90px;
+    height: 80px;
+    justify-content: right;
+}
+.img_cabe2{
+    width: 90px;
+    height: 80px;
+    justify-content: left;   
+}
