@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(186, 255, 232);
+}
+
+.cabeçalho{
+    background-color: rgb(95, 163, 190);
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+}
