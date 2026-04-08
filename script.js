@@ -16,18 +16,31 @@ document.getElementById(formularioAdocao).addEventListener("submit", function(e)
 
     
     if(nome.length < 3) return alert("Nome Inválido!");
-    // como faz o @?????
-    if(telefone < 8) return alert("Número de telefone inválido!");
-    //cpf obrigaório????
+    if(!email.includes("@")) return alert("Email inválido!");
+    if(telefone.length < 8) return alert("Número de telefone inválido!");
+    if(CPF === "") return alert("CPF obrigatório!");//
     if(idade < 18) return alert("Você ainda é menor de idade!");
-    //cidade obrigatório???
-    //tipo de moradia obrigatório??????
-    //possui quintal obrigatório????????
-    //ja teve pet obrigatóio???
-    if(horasSozinho = NaN) return alert("Valor númerico inválido!"); // ta errado
-    if(horasSozinho > 8) return alert ("Você não pode adotar! Você fica muito tempo fora de casa!"); //Solicitar justificativa adicional
+    if(cidade === "") return alert("Cidade obrigatória!");
+    if(moradia === "") return alert("Selecione o tipo de moradia!");
+    if(!quintal) return alert("Informe se possui quintal!");
+    if(!pet) return alert("Informe se já teve pet!");
+    if(isNaN(horasSozinho)) return alert("Valor numérico inválido!");
+    if(horasSozinho > 8){
+        let justificativa = prompt("O animal ficará muito tempo sozinho. Justifique:");
+        if(!justificativa || justificativa.length < 5){
+            return alert("Justificativa insuficiente!");
+        }
+    }
     if(motivo.length < 10) return alert("Motivo da adoção inválido!");
-    // termo deve estar marcado ?????????
+
+    let motivosInvalidos = ["quero", "porque sim", "sim", "gosto"];
+    if(motivosInvalidos.includes(motivo)){
+        return alert("O motivo da adoção não pode ser genérico!");
+    }
+    if(!responsabilidade.checked) return alert("Você deve aceitar o termo!");
+    if(pet.value === "nao"){
+        alert("A ONG devera acompanhar sua adaptação com o pet.");
+    }
 
     document.getElementById("resultado"). innerHTML = "Cadastro realizado com sucesso! <br>" + "Nome: " + nome;
 
