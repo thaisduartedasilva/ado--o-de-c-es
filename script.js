@@ -37,9 +37,9 @@ document .getElementById("formAdocao").addEventListener("submit", function (e) {
     if(motivosInvalidos.includes(motivo)){
         return alert("O motivo da adoção não pode ser genérico!");
     }
-    if(!responsabilidade.checked) return alert("Você deve aceitar o termo!");
+    if(!responsabilidade.checked) return alert("Você deve aceitar os termos de responsabilidade!");
     if(pet.value === "nao"){
-        alert("A ONG devera acompanhar sua adaptação com o pet.");
+        alert("Você nunca teve pets antes. A ONG devera acompanhar sua adaptação com o pet.");
     }
 
     document.getElementById("resultado"). innerHTML = "Cadastro realizado com sucesso! <br>" + "Nome: " + nome;
