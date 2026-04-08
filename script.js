@@ -30,6 +30,5 @@ document.getElementById(formularioAdocao).addEventListener("submit", function(e)
     // termo deve estar marcado ?????????
 
     document.getElementById("resultado"). innerHTML = "Cadastro realizado com sucesso! <br>" + "Nome: " + nome;
-    //
 
 });
