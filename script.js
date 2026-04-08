@@ -36,6 +36,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
 
         }
     }
+
     if (!quintal) return alert("Informe se possui quintal!");
     if (!pet) return alert("Informe se já teve pet!");
     if (isNaN(horasSozinho)) return alert("Valor numérico inválido!");
@@ -54,8 +55,8 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     if (motivosInvalidos.includes(motivo)) {
         return alert("O motivo da adoção não pode ser genérico!");
     }
-    
-    if (responsabilidade === false) return alert("Você deve aceitar os termos de responsabilidade!");//
+
+    if (!responsabilidade.checked) return alert("Você deve aceitar os termos de responsabilidade!");//como?
 
     if (pet.value === "nao") {
         alert("Você nunca teve pets antes. A ONG devera acompanhar sua adaptação com o pet.");
@@ -68,7 +69,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
         return alert("Você tem condições financeiras de ter um pet!");
     }
 
-    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso !< br>" + "Nome: " + nome;
+    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso !< br>" + "Nome: " + nome; // porque?
 
 
 });
