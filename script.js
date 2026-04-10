@@ -66,10 +66,10 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     if (salario <= 1000) {
         return alert("Salário insuficiente! Você não tem codições de ter um pet!");
     } else {
-        return alert("Você tem condições financeiras de ter um pet!");
+        alert("Você tem condições financeiras de ter um pet!");
     }
 
-    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso !< br>" + "Nome: " + nome; // porque?
+    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso ! <br>" + "Nome: " + nome; // porque?
 
 
 });
