@@ -69,7 +69,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
         alert("Você tem condições financeiras de ter um pet!");
     }
 
-    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso ! <br>" + "Nome: " + nome; // porque?
+    document.getElementById("resultado").innerHTML = "Cadastro realizado com sucesso ! <br>" + "Nome: " + nome; 
 
 
 });
