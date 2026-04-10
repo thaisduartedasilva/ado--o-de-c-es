@@ -12,7 +12,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     let pet = document.querySelector('input[name="pet"]:checked');
     let horasSozinho = document.getElementById("horasSozinho").value;
     let motivo = document.getElementById("motivo").value;
-    let responsabilidade = document.getElementById("responsabilidade").value;
+    let responsabilidade = document.getElementById("responsabilidade");
 
 
     if (nome.length < 3) return alert("Nome Inválido!");
@@ -31,8 +31,8 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
     if (moradia === "") return alert("Selecione o tipo de moradia!");
 
     if (moradia === "apartamento") {
-        if (quintal === "sim") {
-            return alert("Você mora em apartamento, você não tem quintal!");// Quem mora em apartamento não pode indicar que possui quintal
+        if (quintal.value === "sim") {
+            return alert("Você mora em apartamento, você não tem quintal!");
 
         }
     }
@@ -56,7 +56,7 @@ document.getElementById("formAdocao").addEventListener("submit", function (e) {
         return alert("O motivo da adoção não pode ser genérico!");
     }
 
-    if (!responsabilidade.checked) return alert("Você deve aceitar os termos de responsabilidade!");//como?
+    if (!responsabilidade.checked) return alert("Você deve aceitar os termos de responsabilidade!");
 
     if (pet.value === "nao") {
         alert("Você nunca teve pets antes. A ONG devera acompanhar sua adaptação com o pet.");
