@@ -84,8 +84,12 @@ document.getElementById("moradia").addEventListener("change", function(e) {
             <input type="radio" name="aceitaPet" value="sim"> Sim
             <input type="radio" name="aceitaPet" value="nao"> Não
         `;
-    } else {
-        aceitaPet.innerHTML = "";
+    } else if(this.value === "casa") { 
+        aceitaPet.innerHTML = `
+            <label>O seu quintal é seguro?</label><br>
+            <input type="radio" name="aceitaPet" value="sim"> Sim
+            <input type="radio" name="aceitaPet" value="nao"> Não
+        `;
     }
 
 });
